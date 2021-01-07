@@ -1,4 +1,4 @@
-package com.wangze3.accutruck;
+package com.wangze3.accutrack;
 
 import org.junit.Test;
 

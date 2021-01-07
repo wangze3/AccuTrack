@@ -1,4 +1,4 @@
-package com.wangze3.accutruck;
+package com.wangze3.accutrack;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.wangze3.accutruck", appContext.getPackageName());
+        assertEquals("com.wangze3.AccuTrack", appContext.getPackageName());
     }
 }

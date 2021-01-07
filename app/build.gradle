@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.wangze3.accutruck"
+        applicationId "com.wangze3.accutrack"
         minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
