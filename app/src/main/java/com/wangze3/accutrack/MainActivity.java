@@ -1,19 +1,17 @@
 package com.wangze3.accutrack;
 
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.view.View;
-
-import android.view.Menu;
-import android.view.MenuItem;
+import com.wangze3.accutrack.sensors.InertialSensorManager;
 
 public class MainActivity extends AppCompatActivity {
+
+    private InertialSensorManager inertialSensorManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,14 +20,25 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        // Setup inertial sensors
+        inertialSensorManager = new InertialSensorManager(this);
+        inertialSensorManager.initializeListeners();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        // inertial sensors
+        inertialSensorManager.registerAllSensors();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        // inertial sensors
+        inertialSensorManager.unregisterAllSensors();
     }
 
     @Override
