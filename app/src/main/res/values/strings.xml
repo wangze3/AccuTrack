@@ -1,10 +1,8 @@
 <resources>
     <string name="app_name">AccuTrack</string>
     <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="accelerometer_label">Accelerometer (m/s<sup><small>2</small></sup>)</string>
+    <string name="acc_values">x:%1$.3f\t\t\t\ty:%2$.3f\t\t\t\tz:%3$.3f</string>
 </resources>

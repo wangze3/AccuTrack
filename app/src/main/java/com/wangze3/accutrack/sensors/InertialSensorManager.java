@@ -8,19 +8,21 @@ import com.wangze3.accutrack.sensors.model.Magnetometer;
 
 public class InertialSensorManager {
 
+    private final Context context;
     private final Accelerometer accelerometer;
     private final Gyroscope gyroscope;
     private final Magnetometer magnetometer;
 
     // Initializes sensors
     public InertialSensorManager(Context context) {
+        this.context = context;
         accelerometer = new Accelerometer(context);
         gyroscope = new Gyroscope(context);
         magnetometer = new Magnetometer(context);
     }
 
     public void initializeListeners() {
-        accelerometer.setListener(new AccelerometerListener());
+        accelerometer.setListener(new AccelerometerListener(context));
         gyroscope.setListener(new GyroscopeListener());
         magnetometer.setListener(new MagnetometerListener());
     }
