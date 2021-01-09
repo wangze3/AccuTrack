@@ -23,10 +23,10 @@ public class AccelerometerListener implements Accelerometer.Listener {
         float y = event.values[1];
         float z = event.values[2];
 
-        setAccTest(x, y, z);
+        setAccText(x, y, z);
     }
 
-    private void setAccTest(float x, float y, float z) {
+    private void setAccText(float x, float y, float z) {
         Resources res = context.getResources();
         String accText = res.getString(R.string.acc_values, x, y, z);
         TextView accValues = ((Activity) context).findViewById(R.id.acc_values);

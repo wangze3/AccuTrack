@@ -23,8 +23,8 @@ public class InertialSensorManager {
 
     public void initializeListeners() {
         accelerometer.setListener(new AccelerometerListener(context));
-        gyroscope.setListener(new GyroscopeListener());
-        magnetometer.setListener(new MagnetometerListener());
+        gyroscope.setListener(new GyroscopeListener(context));
+        magnetometer.setListener(new MagnetometerListener(context));
     }
 
     public void registerAllSensors() {
