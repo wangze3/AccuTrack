@@ -51,7 +51,7 @@
         app:layout_constraintTop_toBottomOf="@+id/acc_values" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/magnetometer_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -68,7 +68,29 @@
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.54"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/magnetometer_text"
         app:layout_constraintTop_toBottomOf="@+id/gyr_values" />
+
+    <TextView
+        android:id="@+id/grav_values"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toEndOf="@+id/magnetometer_text"
+        app:layout_constraintTop_toBottomOf="@+id/mag_values" />
+
+    <TextView
+        android:id="@+id/gravity_vec_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gravity_vec_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/magnetometer_text"
+        app:layout_constraintVertical_bias="0.041" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
