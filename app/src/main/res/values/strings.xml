@@ -14,4 +14,7 @@
 
     <string name="gravity_vec_label">Gravity Vector (m/s<sup><small>2</small></sup>)</string>
     <string name="grav_values">gx:%1$.3f\t\t\t\tgy:%2$.3f\t\t\t\tgz:%3$.3f</string>
+
+    <string name="gps_label">GPS</string>
+    <string name="gps_values">LONG:%1f\t\t\t\tLAT:%2f</string>
 </resources>
