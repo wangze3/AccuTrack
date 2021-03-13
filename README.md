@@ -6,3 +6,6 @@ The advantages of using IMU to track a motion path are:
  - track xyz-position at a finer granularity
 
 Technical overview: the system uses the fundamentals of the Kalman filter. The IMU readings are used in the update (or prediction) stage and the GPS readings are used in the observation (or correction) stage.
+
+
+WORK IN PROGRESS
